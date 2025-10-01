@@ -1,0 +1,37 @@
+pour le compte de ce travail dirigé n2 ? il m'a été chargé par mon groupe de m'occuper de l'exercice 1 qui consite à implementer des operations
+pour une liste chainée triée avec les fonctionnalités suivantes :
+
+Fonctions Implémentées
+
+insertSortedSLL(SNode* head, int value)
+
+But : Insère un élément dans une liste triée tout en maintenant l'ordre croissant
+
+Fonctionnement :
+
+· Crée un nouveau nœud avec la valeur donnée
+· Si la liste est vide ou si la valeur est inférieure au premier élément, l'insère en tête
+· Sinon, parcourt la liste jusqu'à trouver la position d'insertion correcte
+· Insère le nouvel élément à la position appropriée pour conserver l'ordre trié
+
+Complexité : O(n) dans le pire cas
+
+deleteOccurrencesSLL(SNode* head, int value)
+
+But : Supprime toutes les occurrences d'une valeur donnée dans la liste
+
+Fonctionnement :
+
+· Traite d'abord les occurrences en tête de liste
+· Parcourt ensuite le reste de la liste pour supprimer les autres occurrences
+· Libère la mémoire de tous les nœuds supprimés
+
+Caractéristiques
+
+· Liste triée : Les insertions maintiennent automatiquement l'ordre croissant
+· Gestion mémoire : Libération correcte de la mémoire lors des suppressions
+· Générique : Fonctionne avec n'importe quelle valeur entière
+
+Utilisation 
+
+Ces fonctions sont idéales pour maintenir une collection triée d'éléments avec possibilité de suppression efficace d'éléments spécifiques.
