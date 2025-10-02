@@ -1,15 +1,83 @@
 
-Comme il est dit dans la description, il nous a été demandé d’écrire plusieurs programmes en C permettant de résoudre des problèmes spécifiques. Étant donné qu’il s’agissait d’un devoir de groupe, pour plus d’efficacité, nous avons décidé de répartir les tâches et j’ai été chargé d’écrire les lignes de code pour les opérations suivantes
 
-•PROGRAMME PERMETTANT L'INSERTION D'UN ÉLÉMENT DANS UNE LISTE CHAINÉE TRIÉE
 
-•FONCTIONALITÉS PRINCIPALE: Permettre que la liste chainée existante reste triée même après insetion d'un nouvel élément
+---
 
-•DIRECTIVE DE TRAVAIL: Pour écrire ces lignes de code, nous avons analysé les differents cas de figure
+# Listes chaînées (INF 231)
 
-  - Si l'élément s'insère en tête de liste
-  - si l'élément s'insère en fin de liste
-  - si l'élément s'insère dans la liste.
+Objectif
 
-Étant donné qu’il s’agissait d’un devoir en groupe, j’ai bien sûr été présenté mon évolution à chaque fois aux membres faisant partie du même groupe que moi afin qu’on puisse s’entendre sur la présentation du devoir
+Cet exercice pratique a pour but de manipuler différentes structures de listes chaînées en C.
+Il demande d’implémenter plusieurs opérations classiques : insertion, suppression et affichage, en utilisant différents types de listes.
+
+
+ ## Problèmes posés
+
+### 1. Suppression dans une liste simplement chaînée
+
+Lire une valeur donnée par l’utilisateur.
+
+Supprimer toutes les occurrences de cette valeur dans la liste.
+
+Problème : parcourir la liste et gérer les cas particuliers (valeur au début de la liste, au milieu ou à la fin).
+
+
+
+### 2. Insertion dans une liste simplement chaînée triée
+
+Ajouter un élément de manière à ce que la liste reste ordonnée.
+
+Problème : trouver la bonne position et insérer correctement le nouveau nœud.
+
+
+
+### 3. Insertion dans une liste doublement chaînée triée
+
+Même logique que la précédente mais avec des pointeurs avant et arrière.
+
+Problème : bien gérer la mise à jour des deux pointeurs (prev et next).
+
+
+
+### 4. Insertion en tête et en queue dans une liste simplement chaînée circulaire
+
+Gérer une liste où le dernier élément pointe vers le premier.
+
+Problème : bien différencier l’ajout au début et à la fin tout en maintenant la circularité.
+
+
+
+### 5. Insertion en tête et en queue dans une liste doublement chaînée circulaire
+
+Variante circulaire avec pointeurs dans les deux directions.
+
+Problème : maintenir la cohérence des pointeurs (next et prev) en mode circulaire.
+
+
+
+
+
+---
+
+ ## Résumé des structures étudiées
+Liste simplement chaînée (SLL) : pointeur vers l’élément suivant.
+
+Liste doublement chaînée (DLL) : pointeurs vers l’élément suivant et précédent.
+
+Liste simplement chaînée circulaire (CSLL) : le dernier nœud pointe vers le premier.
+
+Liste doublement chaînée circulaire (CDLL) : chaque nœud a un prev et un next, et la liste est circulaire.
+
+En résumé, cet exercice entraîne à :
+
+Parcourir et modifier des listes.
+
+Gérer correctement les pointeurs dans différentes variantes de listes chaînées.
+
+Maintenir des propriétés spécifiques (ordre, circularité).
+
+
+
+---
+
 
