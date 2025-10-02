@@ -13,87 +13,19 @@ Chaque type de liste dispose de fonctions d’insertion, d’affichage et de sup
 ├── list.c        # Implémentations des fonctions de manipulation de listes
 └── README.md     # Documentation du projet
 
-1. Liste simplement chaînée (SLL)
-Structure
-Chaque nœud contient :une valeur (int),un pointeur next vers le nœud suivant.La fin de la liste est marquée par NULL.
+Exercice1: 
+il est question de lire un element et supprimer touttes les occurrences dans la liste.
+pour ce faire il nous faut une fonction qui va prendre ne parametre  la valaur a supprimer toutes ses occurences, ensuite il faut premierement tester si la liste est vide.
+Si la liste est vide in faut envoyer un message d'eerreur pour dire que la suppression est impossible. Au cas ou la liste n'est pas vide il faut tester
+si la valeur a suppeirmer se trouve en tete de liste ainsi creer un pointeur temporaire qui va servir à supprimer toutes les occurencs des la valeur entrer 
+en parametre dans la fonction. La valeur temporaire va prendre la valeur de la tete et la head va prendre la valeur de head -> next pour garder la liste ici servira 
+pour la suppresion en tete, ensuite pour la suppression de autre occurence de la valeur, le pointeur temporaire va prendre la valeur de la tete et va parcourr la liste
+et chaque cellule de la liste on va tester si la valeur a supprimer est contenu dans temp -> valeur , et si c'est le cas cette cellule sera supprimer dela liste 
+ce processus va continuer jusqu'a ce que temp pointe sur le NULL. 
 
-Fonctions principales
- insertSortedSLL
-Objectif : insérer une valeur dans la liste de manière triée.
-Fonctionnement :
-Crée et alloue un nouveau nœud.
-Si la liste est vide ou que la valeur est plus petite que la tête, insertion en tête.
-Sinon, on parcourt jusqu’à trouver l’emplacement correct puis on insère.
-
-deleteOccurrencesSLL
-Objectif : supprimer toutes les occurrences d’une valeur donnée.
-Fonctionnement :
-Parcours de la liste avec deux pointeurs (prec et courant).
-Si la valeur est trouvée, on libère le nœud et on met à jour les pointeurs.
-
-printSLL
-Affiche la liste sous la forme :
-val1 -> val2 -> ... -> NULL
-
-2. Liste doublement chaînée (DLL)
-Structure
-Chaque nœud contient :
-une valeur (int),
-un pointeur next vers le nœud suivant,
-un pointeur prev vers le nœud précédent.
-
-Fonctions principales
-insertSortedDLL
-Objectif : insérer une valeur dans l’ordre croissant.
-Fonctionnement :
-Création d’un nouveau nœud.
-Si la liste est vide ou que la valeur doit aller en tête → insertion au début.
-Sinon, parcours jusqu’à trouver l’emplacement, puis mise à jour des liens prev et next.
-
-printDLL
-Affiche la liste sous la forme :
-NULL <- val1 <-> val2 <-> val3 -> NULL
-
-3. Liste simplement chaînée circulaire (CSLL)
-Structure
-Chaque nœud contient :
-une valeur (int),
-un pointeur next vers le nœud suivant.
-La particularité est que le dernier nœud pointe vers le premier, ce qui rend la liste circulaire.
-
-Fonctions principales
-insertHeadCSLL
-
-Objectif : insérer une valeur en tête.
-Fonctionnement :
-Si la liste est vide → le nœud pointe sur lui-même.
-Sinon, on insère avant la tête et on met à jour le pointeur du dernier pour qu’il pointe vers le nouveau nœud.
-insertTailCSLL
-Objectif : insérer une valeur en queue.
-Fonctionnement :
-Si la liste est vide → le nœud pointe sur lui-même.
-Sinon, on insère après le dernier et on relie à la tête.
-printCSLL
-Parcourt la liste en affichant les valeurs jusqu’à revenir à la tête :
-val1 -> val2 -> val3 -> (retour à la tête)
-
-4. Liste doublement chaînée circulaire (CDLL)
-Structure Chaque nœud contient : une valeur (int),
-un pointeur next vers le nœud suivant,
-un pointeur prev vers le nœud précédent.
-
-La liste est circulaire : le dernier nœud pointe sur le premier (next), le premier nœud pointe sur le dernier (prev).
-Fonctions principales
-insertHeadCDLL
-Objectif : insérer une valeur en tête.
-Fonctionnement :
-Si la liste est vide → le nœud pointe sur lui-même.
-Sinon, on récupère le dernier (head->prev), puis : new->next = head, new->prev = tail, mise à jour des liens du tail et de l’ancien head, head = new.
-
-insertTailCDLL
-Objectif : insérer une valeur en queue.
-Fonctionnement : Si la liste est vide → le nœud pointe sur lui-même. Sinon, on récupère le dernier (head->prev), puis : new->next = head, new->prev = tail,
-mise à jour des pointeurs,la tête ne change pas.
-
-printCDLL
-Affiche la liste dans les deux sens si nécessaire, tout en respectant la circularité.
+Exercice2  et 3: 
+il est question insertion d'un ellment dans une loste simplement chaine trie 
+Pour ce faire on doit tout d'abord creer un espace memoire pour element a inserer a l'aider de la fonction malloc, ensuite pour un trie croissance insrtion va 
+commencer a tester si la liste est vide, si c'est le cas un message d'erreur va etre envoyer, au cas contriare la valeur inserer va etre comparer au valeur des cellules
+de la liste grace au pointeur temporaire qui va etre creer qui va compoarer la valeur a insere a la vealeur du temp -> valeur. Ceci jusqu'a trouver une valeur plus 
+grand que la valeur a inserer. ce processus pour une liste doublemnt chaine  
